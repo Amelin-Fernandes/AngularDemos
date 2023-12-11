@@ -1,0 +1,34 @@
+<div>
+<h2>Add a new person</h2>
+<hr/>
+<h5>{{greeting}}</h5>
+<span>App Rating: {{5*12/100}}</span>
+<hr/>
+<span>Calculate your age in dog years: {{CalculateDogYears(22)}}</span>
+<hr/>
+Recently Joined: {{p.name}} with aadhar no. {{p.aadhar}} of age {{p.age}} joined.
+<br/>
+<hr/>
+<h3>Using [] Binding - Atrribute / Directive Binding: TS -> HTML</h3>
+<span>Which state do you belong to? </span> <input type="text" [value]="state" />
+<button class="btn btn-primary button" (click)="handleclick(state)">  Done</button>
+<p>{{status}}</p>
+<hr/>
+<h3>Add a new person using ngModel [()] binding</h3>
+<form>
+    <input type="text" name="aadhar" class="form-control input" placeholder="Enter aadhar number" [(ngModel)] = "p.aadhar"/>
+    Value in code: {{p.aadhar}}
+    <br/>
+    <input type="text" name="name" class="form-control input" placeholder="Enter your name" [(ngModel)] = "p.name"/>
+    Value in code: {{p.name}}
+    <br/>
+    <input type="number" name="age" class="form-control input" placeholder="Enter your age" [(ngModel)] = "p.age"/>
+    Value in code: {{p.age}}
+    <br/>
+    <input type="checkbox" name="isAlive" class="form-check-input" [(ngModel)] = "p.isAlive"/>
+    Value in code: {{p.isAlive}}
+    <br/>
+    <button class="btn btn-success button" (click)="addPerson(p.aadhar, p.name, p.age, p.isAlive)">Add</button>
+    <span>{{status}}</span>
+</form>
+</div>

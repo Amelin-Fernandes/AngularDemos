@@ -1,0 +1,27 @@
+<h3 class="jumbotron">List of People in the forum</h3>
+<hr/>
+<ul class="table table hover" *ngFor="let p of personList"> <!--let is like var but will keep secret within a block unlike var-->
+    <li>{{p.name}} - {{p.aadhar}}</li>
+</ul>
+  
+<input type="text" [(ngModel)]="valuetosearch">
+
+<div *ngFor="let p of personList|search:valuetosearch">
+    <div class="card float-start mx-3" style="width: 18rem;">
+        <img src="https://picsum.photos/536/354" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Name: {{p.name}}</p>
+          <p class="card-text">Aadhar: {{p.aadhar}}</p>
+        </div>
+      </div>
+</div>
+
+<!-- 1. Create a pipe called reverse
+2. Create a component called NameReverse. to make it visible add it to app.html
+string -->
+<!-- <input type="text" [(ngModel)]="name">
+<span>{{name | reverse}}</span> -->
+
+<!-- for(var i=name.length-1; i>=0;i--)
+let name="amelin"
+result = "nilema" -->

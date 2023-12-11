@@ -1,0 +1,8 @@
+<div #mydiv
+    (mouseover)="lightUp(mydiv)"
+    (mouseout)="switchOff(mydiv)"
+    (dblclick)="dontDisturb(mydiv)">
+Hello this is the template ref div
+</div>
+
+<input type="text" placeholder="Enter your Name" style="background-color: red" #div1 (change)="inputcolor(div1)">

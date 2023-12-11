@@ -1,0 +1,15 @@
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+div{
+    background-color: aliceblue;
+}
+
+.input{
+    background-color: lavender;
+    border-radius: 20px;
+}
+
+.button{
+    background-color: rgb(179, 121, 233);
+    border-radius: 20px;
+    margin-left: 5px; 
+}
